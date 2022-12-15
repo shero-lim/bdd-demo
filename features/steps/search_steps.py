@@ -13,7 +13,7 @@ def step_impl(context, keyword):
 
 @when("打开{url}页面")
 def step_impl(context, url):
-    context.pm = context.wm.get_browser_page_model(PageModel, "", config["seleniumServer"])
+    context.pm = context.wm.get_browser_page_model(PageModel, "", config["selenium_server"])
     context.pm.get(url)
 
 

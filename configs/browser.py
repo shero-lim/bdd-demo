@@ -100,7 +100,7 @@ browserConfigurations = {
         "browserName": "chrome",
         "goog:chromeOptions": {
             "args": ["--use-fake-ui-for-media-stream", "--use-fake-device-for-media-stream",
-                     "--user-data-dir=" + config["userDataDirOfChrome"], *DEFAULT_CHROME_ARGS],
+                     "--user-data-dir=" + config["user_data_dir_of_chrome"], *DEFAULT_CHROME_ARGS],
             "prefs": {
                 **DEFAULT_CHROME_PREFS,
             },
@@ -113,7 +113,7 @@ browserConfigurations = {
     "electron": {
         "browserName": "chrome",
         "goog:chromeOptions": {
-            "binary": config["electronBinary"],
+            "binary": config["electron_binary"],
             "args": ["--use-fake-ui-for-media-stream", "--use-fake-device-for-media-stream", *DEFAULT_CHROME_ARGS],
         },
         "goog:loggingPrefs": {
@@ -133,14 +133,14 @@ browserConfigurations = {
             "browser": "INFO"
         },
         "sf:envs": {
-            "LAST_ENV_URL": config["siteUrl"],
+            "LAST_ENV_URL": config["site_url"],
         }
     },
     "electron#webinar": {
         "browserName": "chrome",
         "browserVersion": "electron",
         "goog:chromeOptions": {
-            "binary": config["electronBinary"],
+            "binary": config["electron_binary"],
             "args": ["--use-fake-ui-for-media-stream", "--use-fake-device-for-media-stream", *DEFAULT_CHROME_ARGS],
         },
         "goog:loggingPrefs": {
@@ -152,9 +152,9 @@ browserConfigurations = {
         "browserName": "chrome",
         "browserVersion": 'electron',
         "goog:chromeOptions": {
-            "binary": config["electronBinary"],
+            "binary": config["electron_binary"],
             "args": ["--use-fake-ui-for-media-stream", "--use-fake-device-for-media-stream",
-                     "--user-data-dir=" + config["userDataDirOfElectron"], *DEFAULT_CHROME_ARGS]},
+                     "--user-data-dir=" + config["user_data_dir_of_electron"], *DEFAULT_CHROME_ARGS]},
         "goog:loggingPrefs": {
             "driver": "INFO",
             "browser": "INFO"
@@ -188,5 +188,3 @@ browserConfigurations = {
 
     },
 }
-
-print(browserConfigurations)

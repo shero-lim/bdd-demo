@@ -11,14 +11,14 @@ class WebdriverManager(object):
     def __init__(self):
         self.drivers: List[WebDriver] = []
 
-    def __get_webdriver(self, browser, seleniumServer: str):
-        driver = webdriver.Remote(seleniumServer, desired_capabilities={"browserName": "chrome"})
+    def __get_webdriver(self, browser, selenium_server: str):
+        driver = webdriver.Remote(selenium_server, desired_capabilities={"browserName": "chrome"})
         driver.set_page_load_timeout(120e3)
         self.drivers.append(driver)
         return driver
 
-    def get_browser_page_model(self, ctor: Type[T], browser, seleniumServer: str) -> T:
-        driver = self.__get_webdriver(browser, seleniumServer)
+    def get_browser_page_model(self, ctor: Type[T], browser, selenium_server: str) -> T:
+        driver = self.__get_webdriver(browser, selenium_server)
         return ctor(driver, "html")
 
     def teardown(self):
