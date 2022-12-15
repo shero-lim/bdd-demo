@@ -8,6 +8,7 @@ from page_model.webdriver_manager import WebdriverManager
 import logging
 import asyncio
 
+
 def before_all(context):
     # concurrency = config["concurrency"]
     # print(concurrency)
@@ -19,9 +20,11 @@ def before_scenario(context, scenario):
     # context.semaphore.locked()
     context.wm = WebdriverManager()
 
+
 def before_step(context, step):
     now = datetime.datetime.now().__str__()
 
+
 def after_scenario(context, scenario):
     context.wm.teardown()
-    # context.semaphore.release()
+    # context.semaphjjjjkore.release()
