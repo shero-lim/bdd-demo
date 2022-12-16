@@ -43,3 +43,6 @@ class BaseModel(WebElement):
 
     def click(self):
         return self.s.click()
+
+    def get_screenshot_as_base64(self):
+        return self.driver.get_screenshot_as_base64()

@@ -13,8 +13,8 @@ class WebdriverManager(object):
         self.drivers: List[WebDriver] = []
 
     def __get_webdriver(self, browser_name, selenium_server: str):
-        oprions = get_option(browser_name)
-        driver = webdriver.Remote(selenium_server, options=oprions)
+        options = get_option(browser_name)
+        driver = webdriver.Remote(selenium_server, options=options)
         driver.set_page_load_timeout(120e3)
         self.drivers.append(driver)
         return driver

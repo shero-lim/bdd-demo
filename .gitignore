@@ -4,8 +4,11 @@ log.txt
 main.py
 features/b.feature
 features/steps/b_steps.py
+Pipfile
 configs/__pycache__/
 utils/__pycache__/
 page_model/__pycache__/
 page_object/__pycache__/
 .idea/
+tests/__pycache__/
+__pycache__

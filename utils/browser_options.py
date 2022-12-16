@@ -49,8 +49,4 @@ def get_option(browser_name: str):
         else:
             options.set_capability(k, v)
 
-    print(options.to_capabilities())
     return options
-
-
-get_option(config["default_browser"])

@@ -10,7 +10,7 @@ class PageModel(BaseModel):
 class BaiDu(BaseModel):
     @property
     def searchbox(self):
-        return self.get_element(self, "#kw")
+        return BaseModel.get_element(self, "#kw")
 
     @property
     def search_button(self):
