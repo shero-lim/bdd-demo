@@ -1,4 +1,3 @@
-
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.remote.webelement import WebElement
 
@@ -18,7 +17,7 @@ class BaseModel(WebElement):
         return self.driver.find_element(using, value)
 
     @classmethod
-    def get_element(cls, self ,selector):
+    def get_element(cls, self, selector):
         return cls(self.driver, selector)
 
     def get_custom_element(self, cls: Type[T], selector: str) -> T:
@@ -43,6 +42,3 @@ class BaseModel(WebElement):
 
     def click(self):
         return self.s.click()
-
-    def get_screenshot_as_base64(self):
-        return self.driver.get_screenshot_as_base64()

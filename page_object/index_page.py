@@ -7,6 +7,7 @@ class IndexPage(BasePage):
     #     return self.driver.title == "百度"
     def validate_page(self):
         return self.title.find("百度搜索")
+
     @property
     def search_box(self):
         return self.find_element_by_selector("#kw")

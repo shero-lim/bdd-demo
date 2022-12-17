@@ -1,3 +1,5 @@
+allure_report/
+allure_result/
 page_object/test.py
 page_model/test.py
 log.txt

@@ -10,3 +10,14 @@ Feature: 搜索
     Examples: 搜索页面
       | url                   |
       | https://www.baidu.com |
+
+  Scenario Outline: 搜索关键词2
+    Given 关键词 behave
+    When 打开<url>页面
+    And  输入关键词
+    And  不点击搜索按钮
+    Then 页面标题中不包含关键词
+
+  Examples: 搜索页面
+    |url                     |
+    |https://www.baidu.com   |

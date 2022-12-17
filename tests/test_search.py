@@ -1,5 +1,6 @@
 from pytest_bdd import given, when, then, parsers, scenario, scenarios
 from retry import retry
+import allure
 
 scenarios("../features/search.feature")
 
@@ -16,7 +17,7 @@ def go_to_url(browser, url):
 
 @when("输入关键词")
 def input_username(browser, keyword):
-    browser.baidu.searchbox.send_keys(keyword)
+    browser.baidu.search_box.send_keys(keyword)
 
 
 @when("点击搜索按钮")
@@ -25,7 +26,7 @@ def click_search(browser):
 
 
 @then("页面标题中应包含关键词")
-@retry(tries=10, max_delay=10e3)
+@retry(tries=15, max_delay=10e3)
 def assert_include_keyword(browser, keyword):
     assert keyword in browser.title
 
